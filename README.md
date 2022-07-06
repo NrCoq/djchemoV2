@@ -1,10 +1,10 @@
-Запуск программа производится коммандой 
+Running a program executed by a command:
 
-python manage.py runserver
+run server python manage.py
 
-Для того чтобы получить доступ к сайту (который запустится по умолчанию на localhost:8000)
-требуется заранее создать пользователя с коммандой
+To access the site (which runs by default on localhost:8000)
+you need to create a user with the command:
 
-python manage.py createsuperuser
+python manage.py creates superuser
 
-После авторизации появится поле для введения структуры молекулы в форме SMILES нотации.
+After authorization, a field for the structure of molecule input will appear .
