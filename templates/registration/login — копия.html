@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<section class="login_container">
+
+	{% if form.errors %}
+		<p>Your username and password didn't match. Please try again.</p>
+	{% endif %}
+
+	{% if next %}
+		{% if user.is_authenticated %}
+			<p>Your account doesn't have access to this page. To proceed,
+			please login with an account that has access.</p>
+		{% endif %}
+	{% endif %}
+	
+    <div class="login">
+      <h1>Войти в личный кабинет</h1>
+      <form method="post" action="{% url 'login' %}">
+	  {% csrf_token %}
+          <p>Логин</p>
+        <p>{{ form.username}}</p>
+          <p>Пароль</p>
+        <p>{{ form.password }}</p>
+
+        <p class="submit"><input type="submit" name="commit" value="Войти"></p>
+      </form>
+    </div>
+
+    <div class="login-help">
+      <a href="{% url 'password_reset' %}">Забыли пароль?</a>
+	</div>
+</section>
+
+{% endblock %}

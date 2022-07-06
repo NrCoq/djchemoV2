@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div style="margin-left: 50px">
+  <h1>Результаты моделирования</h1>
+  <p>SMILES: {{ smiles }}</p>
+  <p>Свойства:</p>
+  <ul>
+    <li><strong>NR-AhR:</strong> {{ nr_ahr }}</li>
+    <li><strong>NR-AR:</strong> {{ nr_ar }}</li>
+    <li><strong>NR-AR-LBD:</strong> {{ nr_ar_lbd }}</li>
+    <li><strong>NR-Aromatase:</strong> {{ nr_aromatase }}</li>
+    <li><strong>NR-ER:</strong> {{ nr_er }}</li>
+    <li><strong>NR-ER-LBD:</strong> {{ nr_er_lbd }}</li>
+    <li><strong>NR-PPAR-gamma:</strong> {{ nr_ppar_gamma }}</li>
+    <li><strong>SR-ARE:</strong> {{ sr_are }}</li>
+    <li><strong>SR-ATAD5:</strong> {{ sr_atad5 }}</li>
+    <li><strong>SR-HSE:</strong> {{ sr_hse }}</li>
+    <li><strong>SR-MMP:</strong> {{ sr_mmp }}</li>
+    <li><strong>SR-p53:</strong> {{ sr_p53 }}</li>
+    <li><strong>LD50:</strong> {{ ld50 }} mg/kg</li>
+    <li><strong>Соответствие полиеновому антибиотику:</strong> {{ similarity }} %</li>
+  </ul>
+  <img src="{{ pic }}", alt="Image failed to load" style="width:500px; height:600px"/>
+</div>
+{% endblock %}

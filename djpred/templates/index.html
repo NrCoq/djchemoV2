@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<section class="login-container">
+  <div align="center">
+    <p>Введите молекулу в виде нотации SMILES</p>
+    <form method="post">
+      {% csrf_token %}
+      <div>{{ form }}</div>
+      <input type="submit" value="Расчёт">
+    </form>
+  </div>
+ </section>
+{% endblock %}

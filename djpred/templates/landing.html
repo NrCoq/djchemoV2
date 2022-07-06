@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Landing page</title>
+        <meta name="next-head-count" content="3">
+		{% load static %}
+        <link rel="preload" href="{% static 'css/styles.css' %}" as="style">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" data-n-g="">
+        <noscript data-n-css="true"></noscript>
+    </head>
+    <body>
+    <div id="__next">
+        <div>
+            <nav class="navbar">
+                <div class="navbar__container container">
+                            <span>
+                                <img src="{% static 'files/logo.svg' %}"
+                                     class="navbar__logo" alt="logo">
+                            </span>
+                    <button type="button" class="menu-icon">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                             style="color:#458FF6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                        </svg>
+                    </button>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            <span class="navbar__link">Главная</span>
+                        </li>
+                        <li class="navbar__item">
+                            <span class="navbar__link"><a href = "#footer" >О нас</a></span>
+                        </li>
+                        <li class="navbar__item">
+                            <span class="navbar__link"><a href = "{% url 'index' %}" >Войти</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="header" id="hero">
+                <div class="header__text-box">
+                    <h1>Новый подход к подбору антимикотиков</h1>
+                    <p>Мы предлагаем доступный способ прогнозирования характеристик антимикотика на основе нейронной сети</p>
+                    <button type="button" class="btn btn-rounded-big" onclick="location.href = '{% url 'index' %}'">Получить прогноз</button>
+
+                </div>
+                <div class="header__draw">
+                    <img src="{% static 'files/illustration.svg' %}"
+                         alt="illustration">
+                </div>
+            </section>
+            <section class="services" id="services">
+                <article class="services__heading">
+                    <h2>Что мы предлагаем</h2>
+                    <div class="border"></div>
+                    <p>Данный сервис позволяет получить прогноз полезных свойств и токсичности выбранного антимикотика</p>
+                </article>
+                <div class="services__cards">
+                    <div class="services__card">
+                        <img
+                            src="{% static 'files/search-doctor.svg' %}"
+                            alt="search doctor">
+                        <h4>Поиск подходящего антимикотика по структуре SMILES</h4>
+                    </div>
+                    <div class="services__card">
+                        <img
+                            src="{% static 'files/consultation.svg' %}"
+                            alt="online pharmacy">
+                        <h4>Прогнозирование биологической активность на 12 различных рецепторах</h4>
+                    </div>
+                    <div class="services__card">
+                        <img
+                            src="{% static 'files/details-info.svg' %}"
+                            alt="consultation">
+                        <h4>Прогнозирование летальной дозы ЛД50</h4>
+                    </div>
+                </div>
+            </section>
+            <section class="contents" id="contents">
+                <div class="providers">
+                    <div class="providers__text-box"><h1>Скачайте наше десктопное приложение</h1>
+                        <div class="border"></div>
+                        <p>Наше приложение также доступно для персонального компьютера</p>
+                        <button type="button" class="btn btn-outline-big">Скачать
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 style="vertical-align:middle;margin-left:5px;margin-top:-2px" height="1em" width="1em"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="providers__draw">
+						<img
+						src="{% static 'files/illustration-2.svg' %}"
+						alt="illustration">
+					</div>
+                </div>
+            </section>
+            <footer class="footer" id="footer">
+                <div class="logo-container">
+                    <p>Веб-приложение для прогноза характеристик антимикотиков</p>
+                    <p>©Ушаков Олег 2021-2022.</p>
+                </div>
+                <div class="footer__links">
+                    <ul><p>Контакты</p>
+                        <li><a href="">E-mail: oolleegg05269@mail.ru</a></li>
+                        <li><a href="">Телефон: +7(911)193-78-15</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    </body>
+</html>

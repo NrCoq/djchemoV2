@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}<title>Molecular Property Predictor</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+			<nav class="navbar__right">
+				<div>
+					<ul class="navbar__menu">
+						<li class="navbar__item">
+							<span class="navbar__link"><a href="{% url 'landing'%}">Главная</a></span>
+						</li>
+						{% if user.is_authenticated %}
+						<li class="navbar__item">
+							<span class="navbar__link"><a href="{% url 'logout'%}?next={{request.path}}">Выйти</a></span>
+						</li>
+						{% endif %}
+					</ul>
+				</div>
+			</nav>
+            {% block content %}{% endblock %}
+</body>
+</html>

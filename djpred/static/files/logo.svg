@@ -1,0 +1,13 @@
+<svg width="160" height="41" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_2" fill="#458FF6" r="20.5" cy="20.5" cx="20.5"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_5" y="28.634804" x="50.412048" stroke-width="0" fill="#273141">AntiMyco</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_6" y="28.138382" x="12.297771" stroke-opacity="null" stroke-width="0" stroke="null" fill="#ffffff">A</text>
+ </g>
+</svg>
